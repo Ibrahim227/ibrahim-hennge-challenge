@@ -17,10 +17,10 @@ def main():
 
     def process_test_case(input_lines, idx):
         X = int(input_lines[idx])
-        integers = map(int, input_lines[idx + 1].split())
-        positives = filter(lambda x: x > 0, integers)
-        squares = map(lambda x: x * x, positives)
-        return sum(squares)
+        integers = map(int, input_lines[idx + 1].split())  # read space-separated integers
+        positives = filter(lambda x: x > 0, integers)  # filter out negative integers
+        squares = map(lambda x: x * x, positives)  # square the positive integers
+        return sum(squares)  # Calculate the sum of squares and store the results
 
     def recursive_process(idx, remaining):
         if remaining == 0:
